@@ -1,0 +1,89 @@
+/* Базові стилі */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(to bottom right, #f9f9f9, #e3f2fd);
+  color: #14213D;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+}
+
+/* Заголовки */
+h2 {
+  font-size: 28px;
+  text-align: center;
+  color: #0D47A1;
+  margin-bottom: 20px;
+}
+
+/* Текстовий блок */
+.text-box {
+  background-color: #ffffff;
+  max-width: 600px;
+  margin: 0 auto 20px;
+  padding: 20px;
+  border-radius: 12px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  line-height: 1.6;
+}
+
+/* Зображення */
+img {
+  width: 100%;
+  max-width: 300px;
+  border-radius: 12px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+  margin-top: 20px;
+}
+
+/* Кнопки */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background-color: #1976D2;
+  color: white;
+  padding: 12px 24px;
+  border-radius: 25px;
+  margin: 10px;
+  transition: background 0.3s, transform 0.2s;
+  font-weight: bold;
+}
+
+.btn:hover {
+  background-color: #0D47A1;
+  transform: scale(1.05);
+}
+
+/* Контейнер для кнопок */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+/* 📱 Адаптивність */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  .text-box {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  .btn {
+    width: 80%;
+    font-size: 16px;
+  }
+
+  img {
+    max-width: 90%;
+  }
+}
