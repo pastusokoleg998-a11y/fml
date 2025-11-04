@@ -1,0 +1,169 @@
+/* 🌟 Базові стилі */
+body {
+  font-family: 'Poppins', sans-serif;
+  background: radial-gradient(circle at top, #e3f2fd, #bbdefb, #90caf9);
+  color: #14213D;
+  text-align: center;
+  margin: 0;
+  padding: 20px;
+  overflow-x: hidden;
+}
+
+/* 🧢 Заголовок із короною */
+h2 {
+  font-size: 32px;
+  color: #0D47A1;
+  position: relative;
+  margin-bottom: 25px;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+h2::after {
+  content: "👑";
+  position: absolute;
+  right: -35px;
+  top: -10px;
+  font-size: 28px;
+  animation: crownFloat 2s infinite ease-in-out;
+}
+
+/* 💎 Текстовий блок */
+.text-box {
+  background: rgba(255, 255, 255, 0.95);
+  max-width: 650px;
+  margin: 0 auto 25px;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  line-height: 1.7;
+  font-size: 18px;
+  animation: fadeIn 1.5s ease-out;
+  border: 2px solid #64b5f6;
+}
+
+/* 🌀 Зображення з ефектом */
+img {
+  width: 100%;
+  max-width: 320px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(13, 71, 161, 0.6);
+  margin-top: 20px;
+  transition: transform 0.5s, box-shadow 0.5s;
+  animation: floatImage 4s ease-in-out infinite;
+}
+
+img:hover {
+  transform: scale(1.08) rotate(2deg);
+  box-shadow: 0 0 30px rgba(25, 118, 210, 0.8);
+}
+
+/* 🔘 Кнопки */
+.btn {
+  display: inline-block;
+  text-decoration: none;
+  background: linear-gradient(45deg, #1976D2, #42A5F5);
+  color: white;
+  padding: 12px 28px;
+  border-radius: 30px;
+  margin: 15px;
+  transition: all 0.3s ease;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(25, 118, 210, 0.3);
+}
+
+.btn:hover {
+  background: linear-gradient(45deg, #0D47A1, #1976D2);
+  transform: scale(1.1);
+  box-shadow: 0 6px 14px rgba(13, 71, 161, 0.5);
+}
+
+/* 🌈 Контейнер для кнопок */
+.links {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 25px;
+}
+
+/* ✨ Анімації */
+@keyframes glowText {
+  from { text-shadow: 0 0 5px #90caf9, 0 0 10px #42a5f5; }
+  to { text-shadow: 0 0 15px #42a5f5, 0 0 25px #1e88e5; }
+}
+
+@keyframes floatImage {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-10px); }
+}
+
+@keyframes crownFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px) rotate(-10deg); }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Адаптивність */
+@media (max-width: 600px) {
+  body {
+    padding: 10px;
+  }
+
+  h2 {
+    font-size: 26px;
+  }
+
+  .text-box {
+    padding: 15px;
+    font-size: 16px;
+  }
+
+  img {
+    max-width: 90%;
+  }
+
+  .btn {
+    width: 80%;
+    font-size: 16px;
+  }
+}
+
+/* 👑 Заголовок із двома коронами */
+h2 {
+  font-size: 34px;
+  color: #0D47A1;
+  text-align: center;
+  position: relative;
+  display: inline-block;
+  margin: 25px auto;
+  animation: glowText 2s ease-in-out infinite alternate;
+}
+
+h2::before,
+h2::after {
+  content: "👑";
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 30px;
+  animation: crownFloat 2s infinite ease-in-out;
+}
+
+h2::before {
+  left: -45px; /* відстань лівої корони */
+  animation-delay: 0.3s;
+}
+
+h2::after {
+  right: -45px; /* відстань правої корони */
+}
+
+/* ✨ Анімації для корон */
+@keyframes crownFloat {
+  0%, 100% { transform: translateY(-50%) rotate(0deg); }
+  50% { transform: translateY(-65%) rotate(-10deg); }
+}
